@@ -1,5 +1,5 @@
 let index=1;
-let audioElement=new Audio('songs/1.mp3' );
+let audioElement=new Audio('1.mp3' );
 //audioElement.play();
 let masterPlay=document.getElementById("masterplay");
 let ProgressBar=document.getElementById("ProgressBar");
@@ -11,17 +11,17 @@ let volume=document.querySelector("#volume i");
 let volumeBar=document.querySelector("#volume .volumeControl");
 audioElement.volume=0.5;
 let songs=[
-  {songName:"Tune_1", filePath:"songs/1.mp3",coverPath:"images/covers/1.jpg",time:"03:50"},
-  {songName:"Tune_2", filePath:"songs/2.mp3",coverPath:"images/covers/2.jpg",time:"02:33"},
-  {songName:"Tune_3", filePath:"songs/3.mp3",coverPath:"images/covers/3.jpg",time:"04:33"},
-  {songName:"Tune_4", filePath:"songs/4.mp3",coverPath:"images/covers/4.jpg",time:"04:27"},
+  {songName:"Tune_1", filePath:"1.mp3",coverPath:"1.jpg",time:"03:50"},
+  {songName:"Tune_2", filePath:"2.mp3",coverPath:"2.jpg",time:"02:33"},
+  {songName:"Tune_3", filePath:"3.mp3",coverPath:"3.jpg",time:"04:33"},
+  {songName:"Tune_4", filePath:"4.mp3",coverPath:"4.jpg",time:"04:27"},
 ]
 songBarName.innerText=songs[0].songName;
 
 function songPlay(ind){
   index=parseInt(ind);
   songBarName.innerText=songs[index-1].songName;
-  audioElement.src="songs/"+index+".mp3";
+  audioElement.src=index+".mp3";
   audioElement.currentTime=0;
   audioElement.play();
 }
@@ -151,7 +151,7 @@ audioElement.addEventListener("ended",()=>{
 
     audioElement.pause();
     songBarName.innerText=songs[index-1].songName;
-    audioElement.src="songs/"+index+".mp3";
+    audioElement.src=index+".mp3";
     audioElement.currentTime=0;
     audioElement.play();
   }
@@ -170,7 +170,7 @@ document.getElementById("next").addEventListener("click",()=>{
 
   audioElement.pause();
 songBarName.innerText=songs[index-1].songName;
-  audioElement.src="songs/"+index+".mp3";
+  audioElement.src=index+".mp3";
   audioElement.currentTime=0;
   audioElement.play();
   /*masterPlay.classList.remove("fa-play");
@@ -188,7 +188,7 @@ document.getElementById("previous").addEventListener("click",()=>{
 
   audioElement.pause();
   songBarName.innerText=songs[index-1].songName;
-  audioElement.src="songs/"+index+".mp3";
+  audioElement.src=index+".mp3";
   audioElement.currentTime=0;
   audioElement.play();
   /*masterPlay.classList.remove("fa-play");
