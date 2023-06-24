@@ -1,7 +1,7 @@
                          /*********GLOBAL INDEX VARIABLE FOR TRACKING CURRENT SONG*********/
 let index = 1;
                        /*********CREATING AUDIO ELEMENT*********/
-let audioElement = new Audio('songs/1.mp3');
+let audioElement = new Audio('1.mp3');
                        /************SELECTING ALL THE REQUIRED HTML ELEMENTS**********/
 let masterPlay = document.getElementById("masterplay");
 let ProgressBar = document.getElementById("ProgressBar");
@@ -13,38 +13,38 @@ let volumeBar = document.querySelector("#volume .volumeControl");
                             /*********STORING DETAILS OF THE SONGS*********/
 let songs = [{
     songName: "The Voice Key",
-    filePath: "songs/1.mp3",
-    coverPath: "images/covers/1.jpg",
+    filePath: "1.mp3",
+    coverPath: "1.jpg",
     time: "03:50"
   },
   {
     songName: "Arrow Rock",
-    filePath: "songs/2.mp3",
-    coverPath: "images/covers/2.jpg",
+    filePath: "2.mp3",
+    coverPath: "2.jpg",
     time: "02:33"
   },
   {
     songName: "Beaumont Themes",
-    filePath: "songs/3.mp3",
-    coverPath: "images/covers/3.jpg",
+    filePath: "3.mp3",
+    coverPath: "3.jpg",
     time: "04:33"
   },
   {
     songName: "Wicked Fingers",
-    filePath: "songs/4.mp3",
-    coverPath: "images/covers/4.jpg",
+    filePath: "4.mp3",
+    coverPath: "4.jpg",
     time: "04:27"
   },
   {
     songName: "On The Mountain",
-    filePath: "songs/5.mp3",
-    coverPath: "images/covers/5.jpg",
+    filePath: "5.mp3",
+    coverPath: "5.jpg",
     time: "03:28"
   },
   {
     songName: "Remembering You",
-    filePath: "songs/6.mp3",
-    coverPath: "images/covers/6.jpg",
+    filePath: "6.mp3",
+    coverPath: "6.jpg",
     time: "03:07"
   },
 ]
@@ -58,7 +58,7 @@ audioElement.volume = 0.5;
 function songPlay(ind) {
   index = parseInt(ind);
   songBarName.innerText = songs[index - 1].songName;
-  audioElement.src = "songs/" + index + ".mp3";
+  audioElement.src = index + ".mp3";
   audioElement.currentTime = 0;
   audioElement.play();
 }
@@ -151,7 +151,7 @@ audioElement.addEventListener("ended", () => {
 
       audioElement.pause();
       songBarName.innerText = songs[index - 1].songName;
-      audioElement.src = "songs/" + index + ".mp3";
+      audioElement.src = index + ".mp3";
       audioElement.currentTime = 0;
       audioElement.play();
     }
@@ -170,7 +170,7 @@ document.getElementById("next").addEventListener("click", () => {
 
   audioElement.pause();
   songBarName.innerText = songs[index - 1].songName;
-  audioElement.src = "songs/" + index + ".mp3";
+  audioElement.src = index + ".mp3";
   audioElement.currentTime = 0;
   audioElement.play();
 
@@ -186,7 +186,7 @@ document.getElementById("previous").addEventListener("click", () => {
 
   audioElement.pause();
   songBarName.innerText = songs[index - 1].songName;
-  audioElement.src = "songs/" + index + ".mp3";
+  audioElement.src = index + ".mp3";
   audioElement.currentTime = 0;
   audioElement.play();
 
