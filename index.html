@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Remixiq</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6497a9ce3a.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="images/favicon.png">
+</head>
+
+<body>
+
+  <!--NAVBAR-->
+
+  <nav>
+    <!--BUTTON FOR DROPDOWN IN MOBILE SCREEN-->
+  <i class="fas fa-bars" id="btn"></i>
+
+  <!--NAV ICONS IN LARGE SCREEN-->
+    <ul>
+<li class="brand"><img src="images\brand_logo.png" alt="">Remixiq</li>
+      <li class="items">Home</li>
+      <li class="items">About</li>
+      <li class="items">Favourites</li>
+    </ul>
+
+  </nav>
+
+  <!--DROPDOWN MENU IN MOBILE SCREEN-->
+  <div class="dropdown">
+    <ul>
+      <li class="items">Home</li>
+      <li class="items">About</li>
+      <li class="items">Favourites</li>
+    </ul>
+
+  </div>
+
+
+
+  <!--********MIDDLE**********-->
+
+  <div class="container">
+    <div class="songList">
+
+      <h1>Best of Music Hits</h1>
+      <div class="songListItem">
+
+
+        <!--FIRST SONG-->
+        <div class="songItem">
+
+          <img src="" alt="1">
+          <span class="songName"> </span>
+           <span class="timestamp"><span class="songTime"></span> <i id="1" class="fa-solid fa-play"></i> </span>
+
+        </div>
+
+        <!--SECOND SONG-->
+
+        <div class="songItem">
+
+          <img src="" alt="1">
+          <span class="songName"></span>
+          <span class="songListPlay"> <span class="timestamp"><span class="songTime"></span> <i id="2" class="fa-solid fa-play"></i> <span></span>
+
+        </div>
+
+        <!--THIRD SONG-->
+
+        <div class="songItem">
+
+          <img src="" alt="1">
+          <span class="songName"></span>
+          <span class="songListPlay"> <span class="timestamp"><span class="songTime"></span> <i id="3" class="fa-solid fa-play"></i> <span></span>
+
+        </div>
+
+       <!--FOURTH SONG-->
+
+        <div class="songItem">
+
+          <img src="" alt="1">
+          <span class="songName"></span>
+          <span class="songListPlay"> <span class="timestamp"><span class="songTime"></span> <i id="4" class="fa-solid fa-play"></i> <span></span>
+
+        </div>
+
+         <!--FIFTH SONG-->
+
+        <div class="songItem">
+
+          <img src="" alt="1">
+          <span class="songName"> </span>
+          <span class="songListPlay"> <span class="timestamp"><span class="songTime"></span> <i id="5" class="fa-solid fa-play"></i> </span></span>
+
+        </div>
+
+        <!--SIXTH SONG-->
+
+        <div class="songItem">
+
+          <img src="" alt="1">
+          <span class="songName"> </span>
+          <span class="songListPlay"> <span class="timestamp"><span class="songTime"></span> <i id="6" class="fa-solid fa-play"></i> </span></span>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--************BOTTOM***************-->
+
+  <div class="bottom">
+    <!--**SEEKBAR**-->
+    <input type="range" name="range" id="ProgressBar" value="0" min="0" max="100" >
+
+   <!--**BACKWARD_ _ _PLAY/PAUSE_ _ _FORWARD**-->
+    <div class="icons">
+      <i class="fa-solid fa-backward fa-2xl" id="previous" style="color: white;"></i>
+      <i class="fa-solid fa-play fa-2xl" id="masterplay" style="color: white;"></i>
+      <i class="fa-solid fa-forward fa-2xl" id="next" style="color: white;"></i>
+    </div>
+
+     <!--BOTTOM LEFT CORNER GIF AND CURRENT SONG NAME-->
+    <div class="songInfo">
+      <img src="images/playing.gif" width="50px" alt="" id="gif"><span id="songBarName" ></span>
+    </div>
+     <div class="runningTime" >
+       00:00/00:00
+     </div>
+
+     <!--VOLUME INCREASE DECREASE MUTE-->
+
+<div id="volume">
+    <input type="range" name="range"  class="volumeControl volumeBarVisibility" value="50" min="0" max="100">
+<i class="fa-solid fa-volume-high fa-xl" style="color: white; "></i>
+</div>
+  </div>
+
+<!--JAVASCRIPT FILE-->
+
+  <script type="text/javascript" src="script.js"></script>
+  
+</body>
+
+</html>

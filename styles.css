@@ -1,0 +1,261 @@
+                                   /*BODY*/
+body{
+  background-color: antiquewhite;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+                              /**********NAVBAR*********/
+
+                              /*****************BUTTON IN SMALL SCREEN**************/
+ #btn{
+  font-size: 30px;
+  color:white;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+                               /*****************DROPDOWN FOR SMALL SCREEN***************/
+.dropdown{
+  display: none;
+}
+
+.dropdown ul{
+  position: absolute;
+  right:2rem;
+  top:65px;
+  width: 300px;
+  height: 150px;
+  background: rgb(64,74,75);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown li{
+  list-style-type: none;
+  padding: 0.7rem;
+}
+.open{
+  display: block;
+}
+                                   /***********NAVBAR SYYLES*****************/
+nav{
+background-color:black;
+  font-family: 'Playfair', serif;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  height: 65px;
+  color: white;
+  align-items: center;
+}
+nav ul li{
+  font-weight: bold;
+  padding: 0 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+                                   /************LOGO STYLE************/
+.brand img{
+  width:45px;
+  height:48px;
+  padding: 0 8px;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+margin-right: 2vw;
+  font-size: 2rem;
+}
+
+nav .items:hover{
+  color: aqua;
+}
+
+                       /****************MIDDLE CONTAINER**********/
+.container{
+  min-height: 72vh;
+  background-color: black;
+  color:white;
+  display: flex;
+  margin: 23px auto;
+  width: 70%;
+  border-radius: 12px;
+padding: 34px;
+box-shadow: 15px 15px 15px #888888;
+background-image: url("images/music_bg_new.jpg");
+background-size: 100%;
+background-repeat: no-repeat;
+}
+.songList{
+  flex-grow: 1;
+  max-width: 400px;
+}
+.songListItem{
+  margin-top:74px;
+}
+
+                                       /**********SONG ITEM**********/
+.songItem{
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+margin: 12px 0;
+justify-content: space-between;
+align-items:center;
+border-radius: 34px;
+}
+
+.songItem:hover{
+  background-color: #AFF
+}
+
+.songItem img{
+width: 40px;
+margin: 0 25px;
+border-radius: 50%;
+}
+                            /***********SONG TIME AND PLAY BUTTON************/
+.timestamp{
+  margin:0 23px;
+}
+.timestamp i{
+  cursor: pointer;
+padding-left: 5px;
+}
+                         /************BOTTOM CONTAINER****************/
+.bottom{
+  position:sticky;
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+                     /************PREV PLAY/PAUSE NEXT BUTTONS****************/
+.icons i{
+  margin-top: 12px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+                       /***************SEEKBAR*************/
+#ProgressBar{
+  width: 80vw;
+  cursor: pointer;
+
+}
+
+                       /************CURRENT SONG PLAYING****************/
+.songInfo{
+  position: absolute;
+  left:10vw;
+  margin-top: 15px;
+}
+
+.songInfo img{
+  opacity:0;
+  transition: opacity 0.5s ease-in;
+}
+
+#songBarName{
+  padding: 5px 5px;
+  font-size:25px;
+
+}
+                                /************CURRENT RUNNING TIME/TOTAL TIME OF SONG****************/
+.runningTime{
+  position: absolute;
+  right:10vw;
+  margin-top: 10px;
+
+}
+
+                                 /************VOLUME UP/ DOWN /MUTE****************/
+#volume{
+  position: absolute;
+  right:6vw;
+  bottom:7vh;
+  cursor: pointer;
+  transform: rotate(90deg);
+  transform-origin: bottom right
+}
+
+#volume i{
+  transform: rotate(-90deg);
+  margin-left: 20px;
+}
+
+.volumeControl{
+  cursor: pointer;
+transform: rotate(-180deg);
+}
+
+
+.volumeBarVisibility{
+  display: none;
+}
+                   /************MEDIA QUERY****************/
+
+@media (max-width:768px) {
+#btn{
+  display:block;
+}
+nav .items{
+  display: none;
+}
+
+.bottom #gif,.bottom #volume{
+  display: none;
+}
+.songInfo{
+  position: static;
+  order: -1;
+  margin-top: 0;
+}
+#songBarName{
+  font-size: 20px;
+}
+.runningTime{
+  font-size: 1rem;
+  margin-top: 15px;
+}
+@media (max-width:450px){
+  .runningTime{
+    font-size: 0.8rem;
+  }
+  .songItem img{
+    margin: 0 10px;
+  }
+  .timestamp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0 10px;
+  }
+  .songItem .songName{
+    font-size: 0.9rem;
+    font-weight: bolder;
+  }
+
+}
