@@ -45,7 +45,7 @@ let songs = [{
     songName: "Remembering You",
     filePath: "6.mp3",
     coverPath: "6.jpg",
-    time: "03:07"
+    time: "03:38"
   },
 ]
 
@@ -143,7 +143,7 @@ audioElement.addEventListener("pause", () => {
 audioElement.addEventListener("ended", () => {
   setTimeout(() => {
     if (audioElement.paused) {
-      if (index == 4) {
+      if (index == 6) {
         index = 1;
       } else {
         index++;
